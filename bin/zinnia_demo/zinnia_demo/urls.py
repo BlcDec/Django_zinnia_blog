@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.conf.urls import url,include
 
 urlpatterns = [
+
     url('^admin/', admin.site.urls),
     url(r'^weblog/',include('zinnia.urls')),
+    url(r'^$',include('zinnia.urls')),
     url(r'^comments/',include('django_comments.urls')),
 ]
